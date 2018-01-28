@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-import LabelComponent from './Message/Label'
-import InputComponent from './Message/Input'
+
+import LabelComponent from './Message/Label';
+import InputComponent from './Message/Input';
 
 
 export default class Message extends React.Component {
