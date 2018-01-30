@@ -1,20 +1,24 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
-// import { Router, Route, IndexRoute } from 'react-router';
-import { HashRouter, Route} from 'react-router-dom';
+// import PropTypes from 'prop-types'
+// import { Router } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
 
 
-import Message from './components/Message'
-
+import MainMenu from './components/MainMenu'
+import Pages from './components/Pages'
 
 
 document.addEventListener('DOMContentLoaded', () => {
-	const app = document.getElementById('message')
-	// ReactDOM.render(<Message/>, app)
+	const app = document.getElementById('my-app')
+	
 	ReactDOM.render(
-		<HashRouter>
-			<Route path="/" component={Message}>
-			</Route>
-		</HashRouter>, app);
+		<BrowserRouter>
+			<div>
+				<MainMenu/>
+				<Pages/>
+			</div>
+		</BrowserRouter>
+		, app);
+
 })
