@@ -11,7 +11,7 @@ export default class Pages extends React.Component {
 		return(
 			<main>	
 				<Switch>
-					<Route exact path="/messages" component={Message}/>
+					<Route path="/messages" component={Message}/>
 					<Route path="/part2" component={Part2}/>
 				</Switch>
 			</main>
