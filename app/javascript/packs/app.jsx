@@ -8,16 +8,24 @@ import { BrowserRouter } from 'react-router-dom';
 import MainMenu from './components/MainMenu'
 import Pages from './components/Pages'
 
+class App extends React.Component{
+	render(){
+		return(
+			<div>
+				<MainMenu/>
+				<Pages/>
+			</div>
+		)
+	}
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
 	const app = document.getElementById('my-app')
 	
 	ReactDOM.render(
 		<BrowserRouter>
-			<div>
-				<MainMenu/>
-				<Pages/>
-			</div>
+			<App/>
 		</BrowserRouter>
 		, app);
 
