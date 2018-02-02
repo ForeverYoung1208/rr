@@ -8,38 +8,33 @@ import InputComponent from './Message/Input';
 export default class Message extends React.Component {
 	constructor(){
 		super();
-		this.state = { messageText3: 'input something'}
+		this.state = { messageText: 'this.props.match.params.text' }
 	
-		// bad practice
-		this.messageText2 = 'hello again!'
 	}
 
-	inputChange(messageText3){
-		//this.setState( {messageText3: messageText3} )
+	inputChange(messageText){
+		//this.setState( {messageText: messageText} )
 		//the same:
-		this.setState( {messageText3} )
-	}
-
-	//bad practice
-	getMessageText(){
-		return 'Hello World!'
+		this.setState( {messageText} )
 	}
 
 	render(){
+		console.log( this.props )
 		return(
 			<div>
 				<LabelComponent 
 					labelCaption='Just look at these wonderful messages!'
-					inputValue={this.state.messageText3}
+					inputValue={this.state.messageText}
 				/>
 				<LabelComponent 
 					labelCaption='Another label here'
-					inputValue={this.state.messageText3}
+					inputValue={this.state.messageText}
 				/>
 
-				<h2> test Message: {this.getMessageText()}, {this.messageText2} </h2>
-				<h2> Inputted message: {this.state.messageText3}</h2>
-				<InputComponent startValue={this.state.messageText3} inputChanged={this.inputChange.bind(this)}/>
+				<h2> test Message: {this.props.match.params.text} </h2>
+				
+				<InputComponent startValue={this.state.messageText} inputChanged={this.inputChange.bind(this)}/>
+				<h2> Inputted message: {this.state.messageText}</h2>
 			</div>
 		)
 	}

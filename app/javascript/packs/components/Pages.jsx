@@ -12,6 +12,7 @@ export default class Pages extends React.Component {
 			<main>	
 				<Switch>
 					<Route path="/messages" component={Message}/>
+					<Route path="/message/:text" component={Message}/>
 					<Route path="/part2" component={Part2}/>
 				</Switch>
 			</main>
@@ -19,3 +20,4 @@ export default class Pages extends React.Component {
 		)
 	}
 }
+

@@ -23,8 +23,8 @@ export default class MainMenu extends React.Component {
 				        <Link className="nav-link" to="/part2">other Part2</Link>
 				      </li>
 				      <li className="nav-item">
-				        <Link className="nav-link disabled" to="#">Nothing2</Link>
-				      </li>
+				        <Link className="nav-link" to="/message/MMMMEEEEEE">Message</Link>
+			      </li>
 				    </ul>
 				  </div>
 				</nav>
