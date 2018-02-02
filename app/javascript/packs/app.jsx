@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 // import PropTypes from 'prop-types'
 // import { Router } from 'react-router';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 
 
 import MainMenu from './components/MainMenu'
@@ -24,9 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	const app = document.getElementById('my-app')
 	
 	ReactDOM.render(
-		<BrowserRouter>
+		<HashRouter>
 			<App/>
-		</BrowserRouter>
+		</HashRouter>
 		, app);
 
 })

@@ -8,7 +8,7 @@ import InputComponent from './Message/Input';
 export default class Message extends React.Component {
 	constructor(){
 		super();
-		this.state = { messageText: 'this.props.match.params.text' }
+		this.state = { messageText: 'text' }
 	
 	}
 
