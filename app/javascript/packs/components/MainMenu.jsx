@@ -17,13 +17,13 @@ export default class MainMenu extends React.Component {
 				        <NavLink className="nav-link" activeClassName='i-active' to="/" exact={true}>Empty home </NavLink>
 				      </li>
 				      <li className="nav-item">
+				        <NavLink className="nav-link" activeClassName='i-active' to="/part2">other Part2</NavLink>
+				      </li>				      
+				      <li className="nav-item">
 				        <NavLink className="nav-link" activeClassName='i-active' to="/messages">Messages</NavLink>
 				      </li>
 				      <li className="nav-item">
-				        <NavLink className="nav-link" activeClassName='i-active' to="/part2">other Part2</NavLink>
-				      </li>
-				      <li className="nav-item">
-				        <NavLink className="nav-link" activeClassName='i-active' to="/message/MMMMEEEEEE">Message</NavLink>
+				        <NavLink className="nav-link" activeClassName='i-active' to="/messages2">Messages2</NavLink>
 			      </li>
 				    </ul>
 				  </div>

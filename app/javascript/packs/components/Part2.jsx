@@ -1,5 +1,5 @@
 import React from 'react';
-import LabelComponent from './Message/Label';
+import LabelComponent from './Messages/Label';
 
 export default class Part2 extends React.Component {
 	constructor(){

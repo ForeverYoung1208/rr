@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom';
 
-import Message from './Message'
+import { Messages, Messages2 } from './Messages'
 import Part2 from './Part2'
 //import Welcome from './Welcome'
 
@@ -19,10 +19,9 @@ export default class Pages extends React.Component {
 			<main>	
 				<Switch>
 				  <Route exact={true} path='/' component={Welcome} />
-					<Route path='/messages' component={Message} />
-					<Route path='/message/:text?' component={Message}/>
-					// "?" means optional here
 					<Route path='/part2' component={Part2}/>
+					<Route path='/messages' render={ ()=><Messages caption="Block1"/> } />
+					<Route path='/messages2' render={ ()=><Messages2 caption="Block2"/> }/>
 				</Switch>
 			</main>
 
