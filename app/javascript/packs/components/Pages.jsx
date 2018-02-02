@@ -13,7 +13,8 @@ export default class Pages extends React.Component {
 				<Switch>
 				  <Route exact path='/'/>
 					<Route path='/messages' component={Message}/>
-					<Route path='/message/:text' component={Message}/>
+					<Route path='/message/:text?' component={Message}/>
+					// "?" means optional here
 					<Route path='/part2' component={Part2}/>
 				</Switch>
 			</main>

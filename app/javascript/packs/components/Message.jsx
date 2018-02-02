@@ -19,7 +19,13 @@ export default class Message extends React.Component {
 	}
 
 	render(){
+		// console.log( this.props )
+		// const urlParams = this.props.match.params
+		// console.log( this.props.match )
+
+		const {params} = this.props.match
 		console.log( this.props )
+
 		return(
 			<div>
 				<LabelComponent 
@@ -31,7 +37,7 @@ export default class Message extends React.Component {
 					inputValue={this.state.messageText}
 				/>
 
-				<h2> test Message: {this.props.match.params.text} </h2>
+				<h2> test Message: {params.text} </h2>
 				
 				<InputComponent startValue={this.state.messageText} inputChanged={this.inputChange.bind(this)}/>
 				<h2> Inputted message: {this.state.messageText}</h2>
