@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 export default class MainMenu extends React.Component {
@@ -13,17 +13,17 @@ export default class MainMenu extends React.Component {
 				  </button>
 				  <div className="collapse navbar-collapse" id="navbarNav">
 				    <ul className="navbar-nav">
-				      <li className="nav-item active">
-				        <Link className="nav-link" to="/" activeClassName='i-active'>Empty home <span className="sr-only">(current)</span></Link>
+				      <li className="nav-item">
+				        <NavLink className="nav-link" activeClassName='i-active' to="/" exact={true}>Empty home </NavLink>
 				      </li>
 				      <li className="nav-item">
-				        <Link className="nav-link" to="/messages">Messages</Link>
+				        <NavLink className="nav-link" activeClassName='i-active' to="/messages">Messages</NavLink>
 				      </li>
 				      <li className="nav-item">
-				        <Link className="nav-link" to="/part2">other Part2</Link>
+				        <NavLink className="nav-link" activeClassName='i-active' to="/part2">other Part2</NavLink>
 				      </li>
 				      <li className="nav-item">
-				        <Link className="nav-link" to="/message/MMMMEEEEEE">Message</Link>
+				        <NavLink className="nav-link" activeClassName='i-active' to="/message/MMMMEEEEEE">Message</NavLink>
 			      </li>
 				    </ul>
 				  </div>

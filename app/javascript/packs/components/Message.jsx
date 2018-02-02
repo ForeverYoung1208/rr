@@ -24,7 +24,6 @@ export default class Message extends React.Component {
 		// console.log( this.props.match )
 
 		const {params} = this.props.match
-		console.log( this.props )
 
 		return(
 			<div>
