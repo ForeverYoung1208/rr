@@ -6,9 +6,9 @@ import InputComponent from './Messages/Input';
 
 
 class Message extends React.Component {
-	constructor(){
-		super();
-		this.state = { messageText: 'text' }
+	constructor(props){
+		super(props);
+		this.state = { messageText: props['text'] }
 	
 	}
 
@@ -28,17 +28,17 @@ class Message extends React.Component {
 			<div>
 				<h2>{this.props.caption}</h2>
 				<LabelComponent 
-					labelCaption='Just look at these wonderful messages!'
+					labelCaption='Just look at these wonderful message!'
 					inputValue={this.state.messageText}
 				/>
 				<LabelComponent 
-					labelCaption='Another label here'
+					labelCaption='Just look at these wonderful message again!'
 					inputValue={this.state.messageText}
 				/>
 
 				
 				<InputComponent startValue={this.state.messageText} inputChanged={this.inputChanged.bind(this)}/>
-				<h2> Inputted message: {this.state.messageText}</h2>
+				Link from message <a href={this.state.messageText}>{this.state.messageText}</a>
 			</div>
 		)
 	}
@@ -51,7 +51,7 @@ export class Messages extends React.Component {
 				<h2> CAPTION: {this.props['caption']} </h2>
 
 				{['m1', 'm2', 'm3'].map( (val,index)=>(
-						<Message key={index} caption={val}/>		
+						<Message key={index} caption={val} text={"https://reactjs.org/docs/handling-events.html"}/>		
 					))}
 				
 			</div>
@@ -60,5 +60,3 @@ export class Messages extends React.Component {
 	}
 
 }
-
-export class Messages2 extends Messages{}
