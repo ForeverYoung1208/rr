@@ -1,5 +1,5 @@
 import React from 'react';
-import {Toggle} from './Part2/Toggle'
+import {Toggle} from './Toggle'
 
 export class Clock extends React.Component {
   constructor(props) {

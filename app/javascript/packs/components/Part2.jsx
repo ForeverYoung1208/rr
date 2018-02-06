@@ -1,6 +1,6 @@
 import React from 'react';
 import LabelComponent from './Messages/Label';
-import {Clock} from './Clock'
+import {Clock} from './Part2/Clock'
 
 export default class Part2 extends React.Component {
 	constructor(){
