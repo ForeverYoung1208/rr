@@ -20,8 +20,8 @@ export default class Pages extends React.Component {
 				<Switch>
 				  <Route exact={true} path='/' component={Welcome} />
 					<Route path='/part2' component={Part2}/>
-					<Route path='/messages' render={ ()=><Messages key='1' caption="Block1"/> } />
-					<Route path='/messages2' render={ ()=><Messages key='2' caption="Block2"/> }/>
+					<Route path='/messages' render={ () =><Messages key='1' caption="Block1"/> } />
+					<Route path='/messages2' render={ () =><Messages key='2' caption="Block2"/> }/>
 				</Switch>
 			</main>
 
