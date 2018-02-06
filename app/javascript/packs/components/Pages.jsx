@@ -3,15 +3,15 @@ import { Switch, Route } from 'react-router-dom';
 
 import { Messages } from './Messages'
 import Part2 from './Part2'
-//import Welcome from './Welcome'
+import Welcome from './Welcome'
 
-const Welcome = (props) => {
-	return(
-		<h1>
-			Welcome!!!
-		</h1>
-	)
-}
+// const Welcome = (props) => {
+// 	return(
+// 		<h1>
+// 			Welcome!!!
+// 		</h1>
+// 	)
+// }
 
 export default class Pages extends React.Component {
 	render(){

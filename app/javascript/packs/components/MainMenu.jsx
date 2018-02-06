@@ -14,7 +14,7 @@ export default class MainMenu extends React.Component {
 				  <div className="collapse navbar-collapse" id="navbarNav">
 				    <ul className="navbar-nav">
 				      <li className="nav-item">
-				        <NavLink className="nav-link" activeClassName='i-active' to="/" exact={true}>Empty home </NavLink>
+				        <NavLink className="nav-link" activeClassName='i-active' to="/" exact={true}>Welcomes</NavLink>
 				      </li>
 				      <li className="nav-item">
 				        <NavLink className="nav-link" activeClassName='i-active' to="/part2">other Part2</NavLink>
