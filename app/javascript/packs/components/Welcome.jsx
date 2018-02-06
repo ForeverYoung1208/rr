@@ -1,6 +1,6 @@
 import React from 'react';
 import {ShowGreetings} from	 './Welcome/ShowGreetings'
-// import {AddNewGreeting} from	 './Welcome/AddNewGreeting'
+import {AddNewGreeting} from	 './Welcome/AddNewGreeting'
 
 
 export default class Welcome extends React.Component {
@@ -15,14 +15,13 @@ export default class Welcome extends React.Component {
 		fetch('greetings/index.json')
 			.then( res => res.json())
 				.then( resj => this.setState({greetings: resj}) )
-	
 	}
 
 	render(){
 		return(
-			<div>
+			<div className='container-fluid'>
 				<ShowGreetings greetings={this.state.greetings}/>
-				{/*<AddNewGreeting />*/}
+				<AddNewGreeting />
 			</div>
 		)
 	}
