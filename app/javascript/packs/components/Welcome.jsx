@@ -30,7 +30,6 @@ export default class Welcome extends React.Component {
 			}
 		}
 
-
 		fetch(
 			'greetings.json',
 			{
@@ -40,7 +39,7 @@ export default class Welcome extends React.Component {
 				credentials: "same-origin"
 			}
 		).then( res => res.json())
-			.then( resj => console.log(resj) )
+			.then( resj => this.setState({greetings: resj}) )
 
 
 

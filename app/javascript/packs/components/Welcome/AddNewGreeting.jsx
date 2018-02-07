@@ -9,6 +9,7 @@ const BtnWithField = (props) => {
 			  </div>
 			  <input 
 			  	type="text" className="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1"
+			  	value={props.value}
 			  	onChange={props.onValueChanged}
 			  	ref={props.inputRef}
 			  />
@@ -44,6 +45,7 @@ export class AddNewGreeting extends React.Component{
 
 			<BtnWithField 
 				btnText='Add New Greeting:' 
+				value={this.state.value}
 				onBtnPressed={this.textSubmitted.bind(this)} 
 				onValueChanged={this.valueChanged.bind(this)}
 				inputRef={(el_i) => this.inputRef = el_i }
