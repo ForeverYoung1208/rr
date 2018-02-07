@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   get 'greetings/index'
+  post 'greetings', to: 'greetings#create'
+
   get 'main/index'
   
   root to: 'main#index'
