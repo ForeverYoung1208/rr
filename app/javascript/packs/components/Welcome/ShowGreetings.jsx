@@ -34,11 +34,8 @@ export class ShowGreetings extends React.Component{
 	oneDeleteClick = (e) =>{
 		const id = e.target.name
 		const selectedCheckboxes = new Set (this.state.selected)
-
-		console.log(id)
 		const s = new Set
 		s.add(id)		
-		console.log(s)
 
 		selectedCheckboxes.delete(id)
 
@@ -55,9 +52,9 @@ export class ShowGreetings extends React.Component{
 							key={g.id} 
 							inputKey={g.id} 
 							message={g.message} 
-							onCheckboxChange={this.checkboxChanged.bind(this)}
+							onCheckboxChange={this.checkboxChanged}
 							checked={this.state.selected.has(g.id.toString())}
-							onBtnDeleteOneClick={this.oneDeleteClick.bind(this)}
+							onBtnDeleteOneClick={this.oneDeleteClick}
 						/> 
 		)
 		return(			

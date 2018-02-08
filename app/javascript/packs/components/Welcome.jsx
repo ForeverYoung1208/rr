@@ -42,7 +42,7 @@ export default class Welcome extends React.Component {
 			.then( resj => this.setState({greetings: resj}) )
 	}
 
-	massDeleteClicked = (selected) => {
+	massDelete = (selected) => {
 		const token = $('meta[name="csrf-token"]').attr('content');
 		const myHeaders = new Headers({
 			'X-CSRF-Token': token,
@@ -75,8 +75,8 @@ export default class Welcome extends React.Component {
 	render(){
 		return(
 			<div className='container-fluid'>
-				<ShowGreetings greetings={this.state.greetings} onBtnDeleteClick={this.massDeleteClicked.bind(this)}/>
-				<AddNewGreeting onTextSubmitted={this.newGreetingSubmitted.bind(this)}/>
+				<ShowGreetings greetings={this.state.greetings} onBtnDeleteClick={this.massDelete}/>
+				<AddNewGreeting onTextSubmitted={this.newGreetingSubmitted}/>
 			</div>
 		)
 	}
