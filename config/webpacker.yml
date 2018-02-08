@@ -32,11 +32,11 @@ development:
   # Reference: https://webpack.js.org/configuration/dev-server/
   dev_server:
     https: false
-    #host: 192.168.99.51
-    host: 192.168.0.128
+    host: 192.168.99.51
+    #host: 192.168.0.128
     port: 3035
-    #public: 192.168.99.51:3035
-    public: 192.168.0.128:3035
+    public: 192.168.99.51:3035
+    #public: 192.168.0.128:3035
     hmr: false
     # Inline should be set to true if using HMR
     inline: true
