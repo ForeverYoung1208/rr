@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const BtnWithField = (props) => {
 	return(
@@ -17,6 +18,17 @@ const BtnWithField = (props) => {
 		</div>
 	)
 
+}
+
+BtnWithField.propTypes = {
+	onBtnPressed: PropTypes.func,
+	btnText: PropTypes.string,
+  value: PropTypes.oneOfType([
+  	PropTypes.string,
+  	PropTypes.number
+  ]),
+	onChange: PropTypes.func,
+	ref: PropTypes.func
 }
 
 
@@ -42,7 +54,6 @@ export class AddNewGreeting extends React.Component{
 
 	render(){
 		return(
-
 			<BtnWithField 
 				btnText='Add New Greeting:' 
 				value={this.state.value}
